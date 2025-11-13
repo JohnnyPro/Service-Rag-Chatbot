@@ -1,0 +1,14 @@
+email-validator
+fastapi
+fastapi-cli
+google-genai
+h2
+httptools
+openai
+pip
+pydantic-settings
+python-multipart
+qdrant-client
+sentence-transformers
+setuptools
+watchfiles
