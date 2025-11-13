@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to Complaint intent
+  steps:
+    - intent: complaint
+    - action: utter_file_a_complaint # Replace with 'action_file_complaint_form' later
+
+- rule: Respond to Feedback intent
+  steps:
+    - intent: feedback
+    - action: utter_give_feedback # Replace with 'action_give_feedback_form' later
+
+- rule: Fallback to RAG for out-of-scope/low confidence
+  steps:
+    - intent: nlu_fallback 
+    - action: action_rag_fallback
